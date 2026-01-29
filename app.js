@@ -29,7 +29,7 @@ app.get('/contact', (req, res) => {
 
 app.post('/enquiry', (req, res) => {
     console.log(req.body);
-    res.send("Thank you for your enquiry. We will contact you shortly.");
+    res.render('thank-you', { title: 'Enquiry Received' });
 });
 
 // Start Server
