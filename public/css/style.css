@@ -498,20 +498,54 @@ footer {
         padding: 0 15px;
     }
 
+    /* Mobile Header Layout */
+    header {
+        padding: 10px 0; /* Reduce padding on mobile */
+    }
+
     .navbar {
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: row; /* Keep logo and hamburger (future) or button in row if possible, or stack neatly */
+        flex-wrap: wrap; 
+        gap: 10px;
+        justify-content: center; /* Center everything nicely */
     }
     
+    .logo {
+        flex-direction: column; /* Stack logo and text for neatness OR keep row but smaller */
+        gap: 5px;
+        text-align: center;
+    }
+
     .logo img {
-        height: 120px; /* Resize logo slightly on mobile */
+        height: 60px; /* MUCH smaller for mobile */
     }
     
+    .logo-text {
+        font-size: 18px; /* Smaller text */
+    }
+    
+    /* Navigation Links Compact */
     .nav-links {
-        flex-direction: column;
+        flex-direction: row; /* Keep them in a row if they fit, or wrap */
+        flex-wrap: wrap;
         gap: 15px;
+        justify-content: center;
         text-align: center;
         width: 100%;
+        margin: 10px 0;
+        font-size: 14px; /* Smaller font for links */
+        order: 3; /* Move links to bottom if needed, currently they just flow naturally */
+    }
+    
+    .nav-links li a {
+        font-size: 14px;
+    }
+    
+    /* Header Button Compact */
+    .header-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+        width: auto;
     }
 
     .hero-image-container {
