@@ -262,6 +262,7 @@ header {
     margin-top: 60px;
     padding-bottom: 40px;
     border-bottom: 1px solid rgba(0,0,0,0.05);
+    flex-wrap: wrap; /* Ensure stats wrap on smaller screens */
 }
 
 .stat-box {
@@ -493,27 +494,63 @@ footer {
 
 /* Responsive */
 @media (max-width: 900px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .logo img {
+        height: 120px; /* Resize logo slightly on mobile */
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        width: 100%;
+    }
+
     .hero-image-container {
         order: -1;
         margin-bottom: 40px;
         width: 100%;
     }
+    
     .blob-mask {
-        width: 350px;
-        height: 350px;
+        width: 300px;
+        height: 300px;
     }
+    
+    .hero-content {
+        min-width: 100%;
+        padding-right: 0;
+        text-align: center;
+    }
+
     .hero-title {
         font-size: 42px;
     }
+    
+    .hero-btns {
+        justify-content: center;
+    }
+    
+    .stats-strip {
+        gap: 30px;
+        justify-content: center;
+    }
+    
     .banner-content {
         flex-direction: column;
     }
+    
     .banner-text {
         max-width: 100%;
         margin-bottom: 30px;
-    }
-    .navbar {
-        flex-direction: column;
-        gap: 20px;
+        text-align: center;
     }
 }
