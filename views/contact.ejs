@@ -1,0 +1,75 @@
+<%- include('partials/header') %>
+
+<section class="hero" style="padding: 40px 0; background: var(--bg-cream);">
+    <div class="container" style="text-align: center;">
+         <span class="tag-line">Get In Touch</span>
+         <h1 class="hero-title">Contact <span>Us</span></h1>
+         <p style="color: var(--text-light);">We are available 24/7 to support you and your loved ones.</p>
+    </div>
+</section>
+
+<section style="padding: 50px 0;">
+    <div class="container hero-wrapper" style="align-items: flex-start;">
+        
+        <!-- Contact Info -->
+        <div class="hero-content" style="flex: 1;">
+            <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <div style="margin-bottom: 25px;">
+                    <h5 style="color: var(--primary-teal); margin-bottom: 5px;">Phone</h5>
+                    <p style="font-size: 18px;">+971 XXXXXXXXX</p>
+                </div>
+                
+                <div style="margin-bottom: 25px;">
+                    <h5 style="color: var(--primary-teal); margin-bottom: 5px;">WhatsApp</h5>
+                    <p style="font-size: 18px;">+971 XXXXXXXXX</p>
+                </div>
+                
+                <div style="margin-bottom: 25px;">
+                    <h5 style="color: var(--primary-teal); margin-bottom: 5px;">Email</h5>
+                    <p style="font-size: 18px;"><a href="mailto:info@alainhomecare.com" style="color: var(--text-main);">info@alainhomecare.com</a></p>
+                </div>
+                
+                <div style="margin-bottom: 25px;">
+                    <h5 style="color: var(--primary-teal); margin-bottom: 5px;">Service Area</h5>
+                    <p style="font-size: 18px;">Al-Ain & Nearby Regions</p>
+                </div>
+                
+                <div style="margin-top: 40px; padding: 20px; background: rgba(252, 207, 78, 0.2); border-radius: 10px;">
+                    <p class="disclaimer" style="font-size: 12px; margin: 0; color: #555;">
+                        Al-Ain Home Care provides non-medical supportive care services. Medical emergencies will be coordinated with family members and healthcare professionals.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="hero-content" style="flex: 1; padding-right: 0;">
+             <div style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <h3 style="margin-bottom: 20px;">Send us a Enquiry</h3>
+                
+                <form action="/enquiry" method="POST">
+                    <div style="margin-bottom: 20px;">
+                        <input type="text" name="name" placeholder="Full Name" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit;">
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <input type="tel" name="phone" placeholder="Phone Number" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit;">
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <input type="text" name="service" placeholder="Required Service" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit;">
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <textarea name="message" rows="4" placeholder="Message" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit;"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary" style="width: 100%; cursor: pointer; border: none;">Submit Enquiry</button>
+                </form>
+             </div>
+        </div>
+        
+    </div>
+</section>
+
+<%- include('partials/footer') %>

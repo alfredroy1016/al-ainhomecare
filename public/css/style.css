@@ -1,0 +1,519 @@
+/* Global Settings */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-teal: #103c42;
+    --dark-green: #0b2b2e;
+    --accent-gold: #fccf4e;
+    --accent-gold-hover: #e5bc46;
+    --bg-cream: #f9f7f2;
+    --text-main: #1a3c40;
+    --text-light: #6b7c80;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-cream);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-teal);
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    padding: 20px 0;
+    background-color: var(--bg-cream);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-teal);
+    font-family: 'Playfair Display', serif;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    color: var(--text-main);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.nav-links li a:hover {
+    color: var(--primary-teal);
+}
+
+.header-btn {
+    background-color: var(--primary-teal);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-btn:hover {
+    background-color: var(--dark-green);
+    color: var(--white);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.hero-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 500px;
+    padding-right: 50px;
+}
+
+.tag-line {
+    background-color: rgba(16, 60, 66, 0.1);
+    color: var(--primary-teal);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 64px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero-title span {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title span::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background-color: var(--accent-gold);
+    z-index: -1;
+    opacity: 0.6;
+    border-radius: 10px;
+}
+
+.hero-desc {
+    font-size: 18px;
+    color: var(--text-light);
+    margin-bottom: 35px;
+    max-width: 500px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-primary {
+    background-color: var(--accent-gold);
+    color: var(--primary-teal);
+    padding: 15px 35px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(252, 207, 78, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-gold-hover);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: var(--primary-teal);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.btn-outline:hover {
+    background-color: var(--dark-green);
+    transform: translateY(-2px);
+}
+
+.hero-image-container {
+    flex: 1;
+    min-width: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.blob-mask {
+    width: 500px;
+    height: 500px;
+    background-image: url('../images/new_hero_banner.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 46% 54% 39% 61% / 46% 39% 61% 54%;
+    animation: morph 8s ease-in-out infinite;
+    position: relative;
+    z-index: 2;
+    box-shadow: 20px 20px 0px rgba(16, 60, 66, 0.1);
+}
+
+@keyframes morph {
+    0% { border-radius: 46% 54% 39% 61% / 46% 39% 61% 54%; }
+    50% { border-radius: 59% 41% 64% 36% / 37% 57% 43% 63%; }
+    100% { border-radius: 46% 54% 39% 61% / 46% 39% 61% 54%; }
+}
+
+.floating-badge {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    z-index: 3;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.floating-badge img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Stats Strip */
+.stats-strip {
+    display: flex;
+    gap: 60px;
+    margin-top: 60px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.stat-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    /* Generic icon placeholder */
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23103c42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>') no-repeat center;
+}
+
+.stat-info h3 {
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.stat-info p {
+    font-size: 14px;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* Dark Banner Section */
+.dark-banner {
+    background-color: var(--primary-teal);
+    color: white;
+    padding: 80px 0;
+    border-radius: 20px;
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+}
+
+.banner-text {
+    flex: 1;
+    max-width: 50%;
+}
+
+.banner-text .tag {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.banner-text h2 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.banner-text p {
+    color: rgba(255,255,255,0.8);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.location-card {
+    background: white;
+    color: var(--text-main);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 350px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.location-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--accent-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--primary-teal);
+}
+
+.map-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 60%;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/World_map_blank_without_borders.svg/2000px-World_map_blank_without_borders.svg.png');
+    background-size: cover;
+    opacity: 0.1;
+    mix-blend-mode: overlay;
+}
+
+/* Services Section */
+.services {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header .sub-head {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.section-header h2 {
+    font-size: 42px;
+}
+
+.section-header h2 span {
+    position: relative;
+    z-index: 1;
+}
+.section-header h2 span::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: var(--accent-gold);
+    z-index: -1;
+    opacity: 0.5;
+    border-radius: 10px;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.service-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+    border: 1px solid #eee;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s;
+    background: white;
+}
+
+.service-card:hover {
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    border-color: transparent;
+    transform: translateY(-5px);
+}
+
+.service-img {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.service-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px; /* Inner radius matching the card mostly */
+    /* Add a custom mask for that 'blob' feel if possible, simpler to just round corners for now based on card design in image 2 which shows varied shapes */
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%); 
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: var(--text-light);
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    font-weight: 700;
+    color: var(--primary-teal);
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.read-more:hover {
+    gap: 8px;
+    color: var(--accent-gold);
+}
+
+/* Footer (Simple) */
+footer {
+    background-color: var(--dark-green);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero-image-container {
+        order: -1;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    .blob-mask {
+        width: 350px;
+        height: 350px;
+    }
+    .hero-title {
+        font-size: 42px;
+    }
+    .banner-content {
+        flex-direction: column;
+    }
+    .banner-text {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
