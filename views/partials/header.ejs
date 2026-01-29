@@ -6,6 +6,7 @@
     <title>Al-Ain Home Care - <%= title %></title>
     <link rel="icon" href="/images/favicon.png">
     <link rel="stylesheet" href="/css/style.css">
+    <!-- Add FontAwesome for the bars icon, or we can use CSS shapes. CSS shapes is lighter. -->
 </head>
 <body>
 
@@ -18,14 +19,37 @@
                     <div class="logo-text">Al-Ain Home Care</div>
                 </a>
             </div>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/services">Services</a></li>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-            <a href="tel:+96598080792" class="header-btn">
-                <span>Call Us Now</span>
-            </a>
+
+            <!-- Hamburger Icon (Visible on Mobile) -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+            <!-- Nav Menu (Links + Button) -->
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+                <a href="tel:+96598080792" class="header-btn">
+                    <span>Call Us Now</span>
+                </a>
+            </div>
         </div>
     </header>
+    
+    <!-- Overlay for mobile menu -->
+    <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            const overlay = document.getElementById('menuOverlay');
+            navMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+        }
+    </script>
