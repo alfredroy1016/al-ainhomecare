@@ -64,11 +64,11 @@ header {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .logo img {
-    height: 50px;
+    height: 150px;
 }
 
 .logo-text {
